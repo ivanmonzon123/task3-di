@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {LazyLoadedComponent} from './lazy-loaded.component';
+import {LazyRoutingModule} from './routes/lazy-routing.module';
 import {LazyService} from './service/lazy.service';
 
 
 
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    LazyLoadedComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    LazyRoutingModule
   ],
   providers: [
     LazyService
