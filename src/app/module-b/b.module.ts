@@ -8,6 +8,9 @@ import { FirstBComponent } from './components/first-b/first-b.component';
   declarations: [
     FirstBComponent
   ],
+  exports: [
+    FirstBComponent
+  ],
   imports: [
     CommonModule
   ]
