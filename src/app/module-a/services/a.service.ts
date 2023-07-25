@@ -5,7 +5,7 @@ export class AService {
 
   constructor() { }
 
-  greeting(): void{
-    console.warn("Hello, from AService")
+  get greeting(): string{
+    return "Hello, from AService";
   }
 }
