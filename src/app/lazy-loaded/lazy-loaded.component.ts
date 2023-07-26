@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LazyService} from './service/lazy.service';
 
 @Component({
   selector: 'app-lazy-loaded',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lazy-loaded.component.scss']
 })
 export class LazyLoadedComponent implements OnInit {
+  greeting: string = '';
 
-  constructor() { }
+
+  constructor(private lazyService: LazyService) { }
 
   ngOnInit(): void {
+    this.greeting = this.lazyService.greeting;
   }
 
 }

@@ -10,18 +10,18 @@ import {AService} from '../../module-a/services/a.service';
 export class FirstAppComponent implements OnInit {
   greeting: string = '';
 
-  constructor(
-    private aService: AService) {
-  }
   // constructor(
-  //   private aService: AService,
-  //   private lazyService: LazyService) {
+  //   private aService: AService) {
   // }
+   constructor(
+     private aService: AService,
+     private lazyService: LazyService) {
+   }
 
 
   ngOnInit(): void {
     this.greeting = this.aService.greeting;
-    // this.greeting = this.lazyService.greeting;
+     this.greeting = this.lazyService.greeting;
   }
 
 }
